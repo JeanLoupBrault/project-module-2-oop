@@ -39,9 +39,15 @@ const addBackground = root => {
     // We create a new img DOM node.
     const bg = document.createElement("img");
     // We set its src attribute and the height and width CSS attributes
-    bg.src = 'images/stars.png';
+//    if (isDead = false) {
+//        bg.src = 'images/game_over.png';
+//    bg.style.height = `${GAME_HEIGHT}px`;
+//    bg.style.width = `${GAME_WIDTH}px`;
+//    } else {
+    bg.src = 'images/StarWars.gif';
     bg.style.height = `${GAME_HEIGHT}px`;
     bg.style.width = `${GAME_WIDTH}px`;
+//    }
     // We add it to the root DOM node
     root.append(bg);
     // We don't want the enemies to go beyond the lower edge of the image
@@ -57,3 +63,44 @@ const addBackground = root => {
     whiteBox.style.background = '#fff';
     root.append(whiteBox);
 }
+
+//        let c = document.getElementById("myCanvas");
+//        let ctx = c.getContext("2d");
+//            let score = 0;
+//        function drawScore() {
+//            ctx.font = "16px Arial";
+//            ctx.fillStyle = "#0095DD";
+//            ctx.fillText("Score: "+score, 8, 20);
+//        }
+//        root.append(myCanvas);
+
+//<!-- The video -->
+//<video autoplay muted loop id="myVideo">
+//    <source src="/images/StarWars.mov" type="video/mpg">
+//</video>
+
+//<!-- Optional: some overlay text to describe the video -->
+//<div class="content">
+//    <h1>Heading</h1>
+//    <p>Star Wars</p>
+//<!-- Use a button to pause/play the video with JavaScript -->
+//<button myBtn id="myBtn" onclick="myFunction()">Pause</button>
+//    </div>    
+
+// Get the video
+//const video = document.getElementById("myVideo");
+
+// Get the button
+//const btn = document.getElementById("myBtn");
+
+// Pause and play the video, and change the button text
+//function myFunction() {
+//  if (video.paused) {
+//    video.play();
+//    btn.innerHTML = "Pause";
+//  } else {
+//    video.pause();
+//    btn.innerHTML = "Play";
+//  }
+//}
+
