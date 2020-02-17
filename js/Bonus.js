@@ -1,7 +1,7 @@
 // The Enemy class will contain information about the enemy such as
 // its position on screen. It will also provide methods for updating
 // and destroying the enemy.
-class Enemy extends Entity {
+class Bonus extends Enemy {
 
     // The constructor takes 2 arguments.
     // - theRoot refers to the parent DOM element.
@@ -10,10 +10,10 @@ class Enemy extends Entity {
     // Since the constructor takes 2 parameters
     // and the 2 parameters provide important information, we must supply 2 arguments to "new" every time we
     // create an instance of this class.
-    constructor(theRoot, enemySpot, image) {
+    constructor(theRoot, bonusSpot, image) {
         super();
-        this.x = enemySpot * ENEMY_WIDTH;
-        this.y = -ENEMY_HEIGHT;
+        this.x = bonusSpot * ENEMYLUKE_WIDTH;
+        this.y = -ENEMYLUKE_HEIGHT;
         this.render(theRoot, image, this.x, this.y);
     
 
@@ -25,7 +25,7 @@ class Enemy extends Entity {
         // - We need the root DOM element so that we can remove the enemy when it is no longer needed. This will be done at a later time.
         // - We need to keep track of the enemy spot so that we don't place two enemies in the same spot.
         this.root = theRoot;
-        this.spot = enemySpot;
+        this.spot = bonusSpot;
         // The x position of the enemy is determined by its width and its spot. We need this information for the lifetime
         // of the instance, so we make it a property of the instance. (Why is this information needed for the lifetime of the instance?)
         
@@ -48,7 +48,7 @@ class Enemy extends Entity {
         //this.domElement.style.zIndex = 5;
         // Show that the user can actually see the img DOM node, we append it to the root DOM node.
         //theRoot.appendChild(this.domElement);
-        this.speed = Math.random() / 2 + 0.25;
+        this.speed = Math.random() / 2 + 0.5;
     }
 
     // We set the speed property of the enemy. This determines how fast it moves down the screen. 

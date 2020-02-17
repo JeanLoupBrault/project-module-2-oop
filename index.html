@@ -2,13 +2,50 @@
 <head>    
     <title>Nyan Kat</title> 
 </head> 
-<body>    
+<body>
+
+    
     <div id="app"></div> 
-    <script src="js/data.js"></script> 
+    <script src="js/data.js"></script>
+    <script src="js/Engine.js"></script> 
     <script src="js/Enemy.js"></script> 
     <script src="js/engine-utilities.js"></script> 
-    <script src="js/Engine.js"></script> 
     <script src="js/Player.js"></script> 
-    <script src="js/main.js"></script> 
-</body> 
+    <script src="js/main.js"></script>
+
+                   
+    <audio controls autoplay loop>
+        <source src="sounds/alien-spaceship.mp3" type="audio/mpeg" hidden="true" autoplay="true" loop="true">
+    </audio>
+
+       <div gameEnd id="game-end">
+            <class endMessage id="end-message">You just died! Game over.</class>
+       </div>
+       <div>
+            <class howManyLives id="how-many-lives">How many lives do you want? (1 to 3)</class>
+                <button lives1 id="lives1">1</button>
+                <button lives2 id="lives2">2</button>
+                <button lives3 id="lives3">3</button>
+        </div>
+        <div>
+            <class continuePlay id="continue-play" visibility=hidden>Do you want to play another game?</class>
+                <button newGame id="new-game" onclick="console.log('NEW game')">New game</button>
+                <button quitGame id="quit-game" onclick="console.log('Quit')">Quit game</button>
+        </div>
+        <div>
+            <class addAnotherEnemy id="add-another-enemy" visibility='hidden'>Do you want to add another enemy?</class>
+                <button newEnemy id="new-enemy" onclick="addNewEnemy()">Yes, add new enemy</button>
+                <button noNewEnemy id="no-new-enemy">No, do not add new enemy</button>
+        </div>
+        <div>
+        <class playEndGameSound id="play-end-game-sound" onclick="play ('Sad_Trombone.mp3')" visibility=hidden>Play end of game sound</class>
+            <source src="sounds/Sad_Trombone.mp3" type="audio/mpeg">
+        </div>
+        <div>
+            <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+            </canvas>
+        </div>
+</body>
+
+<footer></footer> 
 </html> 
